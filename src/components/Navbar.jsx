@@ -32,7 +32,7 @@ const Navbar = () => {
     },[currentScrollY,lastScrollY])
 
     useEffect(()=>{
-        gsap.to(navcontainerref,{
+        gsap.to(navcontainerref.current,{
             y:isNavVisible ? 0 : -100,
             opacity: isNavVisible ? 1 : 0,
             duration: 0.2,
